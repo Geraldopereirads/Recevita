@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Recevita.Api/Recevita.Api.csproj" />
+  </Folder>
+  <Folder Name="/tests/" />
+</Solution>
