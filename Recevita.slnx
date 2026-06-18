@@ -1,6 +1,14 @@
 <Solution>
-  <Folder Name="/src/">
-    <Project Path="src/Recevita.Api/Recevita.Api.csproj" />
+  <Folder Name="/src/" />
+  <Folder Name="/src/Backend/">
+    <Project Path="src/Backend/Recevita.Application/Recevita.Application.csproj" Id="0503fa01-5efd-4905-aad8-c69f6e5d98a1" />
+    <Project Path="src/Backend/Recevita.Domain/Recevita.Domain.csproj" Id="5f5b8c04-456a-4e3f-98d9-ca65b66e703f" />
+    <Project Path="src/Backend/Recevita.Infrastructure/Recevita.Infrastructure.csproj" Id="b1aaa4bd-5a21-4297-b27f-4ac24d610473" />
+    <Project Path="src/Backend/Recevita.Api/Recevita.Api.csproj" />
+  </Folder>
+  <Folder Name="/src/Shared/">
+    <Project Path="src/Shared/Recevita.Communication/Recevita.Communication.csproj" Id="cad8f46a-8c50-49b7-b3b6-7a319a860ee7" />
+    <Project Path="src/Shared/Recevita.Exception/Recevita.Exception.csproj" Id="6f5632a0-158b-4a01-b512-e6fac95903b3" />
   </Folder>
   <Folder Name="/tests/" />
 </Solution>
