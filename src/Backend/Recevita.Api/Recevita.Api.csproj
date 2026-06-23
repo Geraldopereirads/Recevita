@@ -11,4 +11,11 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="10.2.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Recevita.Communication\Recevita.Communication.csproj" />
+    <ProjectReference Include="..\..\Shared\Recevita.Exception\Recevita.Exception.csproj" />
+    <ProjectReference Include="..\Recevita.Application\Recevita.Application.csproj" />
+    <ProjectReference Include="..\Recevita.Infrastructure\Recevita.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
