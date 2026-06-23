@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Recevita.Communication\Recevita.Communication.csproj" />
+    <ProjectReference Include="..\..\Shared\Recevita.Exception\Recevita.Exception.csproj" />
+    <ProjectReference Include="..\Recevita.Domain\Recevita.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
