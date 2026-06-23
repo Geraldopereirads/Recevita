@@ -21,5 +21,11 @@ O projeto segue a arquitetura **DDD (Domain-Driven Design)**.
 
 ### Roadmap
 
-- [ ] Registro de usuário
-- [ ] Login de usuário
+- [ ] Registro de usuário 
+- [ ] Criar regra de negócio para o cadastro
+- [ ] Criptografrar a senha do branco de dados
+- [ ] Armazenar no banco de dados as informações do usuário
+- [ ] criar migrations para as tabelas
+- [ ] Implementar testes de Unidade para o validator
+- [ ] Implementar testes de Unidade para a regra de negócio
+- [ ] Implementar testes de integração para o fluxo de cadastro
