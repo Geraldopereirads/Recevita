@@ -2,32 +2,46 @@
 
 ## Objetivo
 
-### Construir uma plataforma moderna para amantes da culinária.
-### Integrar inteligência artificial para enriquecer a experiência dos usuários.
+Construir uma plataforma moderna para amantes da culinária.
+
+Integrar inteligência artificial para enriquecer a experiência dos usuários.
 
 ---
 
 ## Estrutura inicial
 
-### O projeto segue a arquitetura **DDD (Domain-Driven Design)**.
+### Domain-Driven Design (DDD)
+
+*Estou utilizando o DDD para organizar a estrutura da aplicação conforme o projeto cresce.*
+
+*Essa abordagem permite separar melhor as responsabilidades de cada camada, tornando o código mais organizado, fácil de manter e preparado para receber novas funcionalidades.*
+
+### S O L I D
+
+*O desenvolvimento da aplicação segue os princípios SOLID, utilizando boas práticas para criar um código com responsabilidades bem definidas, baixo acoplamento e maior facilidade de manutenção, testes e evolução.*
 
 ---
 
-## Tecnologias utilizadas
+### Tecnologias utilizadas
 
-### C#
+*C#*
+
 Linguagem principal utilizada para o desenvolvimento da aplicação.
 
-### .NET 8
+*.NET 8*
+
 Framework utilizado para construção da API e gerenciamento da aplicação.
 
-### SQL Server
+*SQL Server*
+
 Banco de dados relacional utilizado para persistência das informações.
 
-### Entity Framework
+*Entity Framework*
+
 ORM utilizado para mapeamento objeto-relacional e acesso ao banco de dados.
 
-### FluentValidation (Application)
+*FluentValidation*
+
 Utilizei para validar os dados de entrada, mantendo as regras organizadas e desacopladas da lógica de negócio, além de permitir mensagens de erro personalizadas.
 
 ---
