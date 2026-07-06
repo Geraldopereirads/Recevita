@@ -1,10 +1,34 @@
+using Microsoft.AspNetCore.Localization;
+using Microsoft.Extensions.Options;
+using Recevita.Api.Filters;
+using System.Globalization;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.AddSwaggerGen();
 
+builder.Services.Configure<RequestLocalizationOptions>(options =>
+{
+    var supportedCultes = new List<CultureInfo> { new CultureInfo("pt-BR") };
+
+    options.DefaultRequestCulture = new RequestCulture("pt-BR");
+
+    options.SupportedCultures = supportedCultes;
+    options.SupportedUICultures = supportedCultes;
+
+    options.RequestCultureProviders = [new AcceptLanguageHeaderRequestCultureProvider()];
+});
+
+builder.Services.AddMvc(options => options.Filters.Add<ExceptionFilter>());
+
 var app = builder.Build();
+
+var localizationOptions = app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>();
+
+app.UseRequestLocalization(localizationOptions.Value);
+
 
 if (app.Environment.IsDevelopment())
 {
