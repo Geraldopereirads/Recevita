@@ -59,3 +59,4 @@ Utilizei para validar os dados de entrada, mantendo as regras organizadas e desa
 - [x] Implementar FluentValidation para validar os dados
 - [ ] Implementar Entity Farmework
 - [ ] Implementar SQL Server
+- [ ] Criar Exceptions personalizadas
