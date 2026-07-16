@@ -28,7 +28,7 @@ Integrar inteligência artificial para enriquecer a experiência dos usuários.
 
 Linguagem principal utilizada para o desenvolvimento da aplicação.
 
-*.NET 8*
+*.NET 10*
 
 Framework utilizado para construção da API e gerenciamento da aplicação.
 
