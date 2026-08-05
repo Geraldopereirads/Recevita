@@ -44,13 +44,17 @@ ORM utilizado para mapeamento objeto-relacional e acesso ao banco de dados.
 
 Utilizei para validar os dados de entrada, mantendo as regras organizadas e desacopladas da lógica de negócio, além de permitir mensagens de erro personalizadas.
 
+*Argon2*
+
+Utilizei para proteger as senhas dos usuários por meio de criptografia baseada em hash, oferecendo maior segurança no armazenamento das credenciais e resistência a ataques de força bruta.
+
 ---
 
 ### Roadmap
 
 - [ ] Registro de usuário 
 - [ ] Criar regra de negócio para o cadastro
-- [ ] Criptografrar a senha do branco de dados
+- [x] Criptografrar a senha do branco de dados
 - [ ] Armazenar no banco de dados as informações do usuário
 - [ ] criar migrations para as tabelas
 - [ ] Implementar testes de Unidade para o validator
