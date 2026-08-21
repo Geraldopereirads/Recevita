@@ -48,6 +48,10 @@ Utilizei para validar os dados de entrada, mantendo as regras organizadas e desa
 
 Utilizei para proteger as senhas dos usuários por meio de criptografia baseada em hash, oferecendo maior segurança no armazenamento das credenciais e resistência a ataques de força bruta.
 
+*Mapster (Application)*
+
+Utilizado para facilitar a conversão de dados entre as camadas da aplicação (como DTOs e entidades), deixando o código mais limpo e organizado. Com isso, evitamos repetições desnecessárias e ganhamos mais agilidade na manutenção e evolução do sistema.
+
 ---
 
 ### Roadmap
