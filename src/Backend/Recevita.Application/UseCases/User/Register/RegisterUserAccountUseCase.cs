@@ -1,16 +1,25 @@
 ﻿using Mapster;
 using Recevita.Communication.Requests;
+using Recevita.Domain.Security.PasswordHashing;
 using Recevita.Exception.ExeceptionsBase;
 
 namespace Recevita.Application.UseCases.User.Register;
 
-public class RegisterUserAccountUseCase
+public class RegisterUserAccountUseCase : IRegisterUserAccountUseCase
 {
+    private readonly IPasswordHasher _passwordHasher;
+
+    public RegisterUserAccountUseCase(IPasswordHasher passwordHasher)
+    {
+        _passwordHasher = passwordHasher;
+    }
     public void Execute(RequestRegisterUserAccountJson request)
     {
         ValidateAndThrowOnFailures(request);
 
         var user = request.Adapt<Domain.Entities.User>();
+
+        user.Password = _passwordHasher.HashPassword(request.Password);
     }
 
     private void ValidateAndThrowOnFailures(RequestRegisterUserAccountJson request)
