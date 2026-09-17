@@ -1,13 +1,20 @@
 using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Options;
+using Recevita.Api.Converters;
 using Recevita.Api.Filters;
+using Recevita.Application;
+using Recevita.Infrastructure;
 using System.Globalization;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddJsonOptions(options => options.JsonSerializerOptions.Converters.Add(new StringConverter()));
 builder.Services.AddOpenApi();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddApplication();
+builder.Services.AddInfrastructure();
+
 
 builder.Services.Configure<RequestLocalizationOptions>(options =>
 {
@@ -22,6 +29,8 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
 });
 
 builder.Services.AddMvc(options => options.Filters.Add<ExceptionFilter>());
+
+builder.Services.AddRouting(options => options.LowercaseUrls = true);
 
 var app = builder.Build();
 

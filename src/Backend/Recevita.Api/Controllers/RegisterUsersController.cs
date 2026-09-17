@@ -4,16 +4,15 @@ using Recevita.Communication.Requests;
 
 namespace Recevita.Api.Controllers;
 
-[Route("users")]
+[Route("Users")]
 [ApiController]
 public class RegisterUsersController : ControllerBase
 {
     [HttpPost]
-    public IActionResult RegisterUser([FromBody]RequestRegisterUserAccountJson request)
+    public IActionResult RegisterUser(
+        [FromBody] RequestRegisterUserAccountJson request,
+        [FromServices] IRegisterUserAccountUseCase useCase)
     {
-        // Registro a conta de uma pessoa
-        var useCase = new RegisterUserAccountUseCase();
-
         useCase.Execute(request);
 
         return Created();
