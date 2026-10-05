@@ -9,11 +9,11 @@ namespace Recevita.Api.Controllers;
 public class RegisterUsersController : ControllerBase
 {
     [HttpPost]
-    public IActionResult RegisterUser(
+    public async Task <IActionResult> RegisterUser(
         [FromBody] RequestRegisterUserAccountJson request,
         [FromServices] IRegisterUserAccountUseCase useCase)
     {
-        useCase.Execute(request);
+       await useCase.Execute(request);
 
         return Created();
     }

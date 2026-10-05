@@ -8,4 +8,6 @@ internal class RecevitaDbContext : DbContext
     public RecevitaDbContext(DbContextOptions options) : base(options) { }
 
     public DbSet<User> Users { get; set; }
+
+
 }
