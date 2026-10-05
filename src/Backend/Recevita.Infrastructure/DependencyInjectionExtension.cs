@@ -1,13 +1,30 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Recevita.Domain.Repositories;
+using Recevita.Domain.Repositories.User;
 using Recevita.Domain.Security.PasswordHashing;
+using Recevita.Infrastructure.DataAccess;
+using Recevita.Infrastructure.DataAccess.Repositories;
 using Recevita.Infrastructure.Security.PasswordHashing;
 
 namespace Recevita.Infrastructure;
 
 public static class DependencyInjectionExtension
 {
-    public static void AddInfrastructure(this IServiceCollection services)
+    extension(IServiceCollection services)
     {
-        services.AddScoped<IPasswordHasher, Argon2PasswordHasher>();
+        public void AddInfrastructure(IConfiguration configuration)
+        {
+            services.AddScoped<IPasswordHasher, Argon2PasswordHasher>();
+            services.AddScoped<IUserWriteOnlyRepository, UserRepositories>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            services.AddDbContext<RecevitaDbContext>(config =>
+            {
+                var connectionString = configuration.GetConnectionString("ConnectionSQLServer")!;
+                config.UseSqlServer(connectionString);
+            });
+        }
     }
 }
