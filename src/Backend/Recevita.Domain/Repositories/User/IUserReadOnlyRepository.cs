@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace Recevita.Domain.Repositories.User;
 
-namespace Recevita.Domain.Repositories.User;
-
-internal interface IUserReadOnlyRepository
+public interface IUserReadOnlyRepository
 {
+    Task<bool> ExistActiveUserWithEmail(string email);
 }

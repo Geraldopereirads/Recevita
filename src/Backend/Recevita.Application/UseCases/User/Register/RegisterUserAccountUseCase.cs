@@ -5,6 +5,7 @@ using Recevita.Communication.Responses;
 using Recevita.Domain.Repositories;
 using Recevita.Domain.Repositories.User;
 using Recevita.Domain.Security.PasswordHashing;
+using Recevita.Exception;
 using Recevita.Exception.ExeceptionsBase;
 
 namespace Recevita.Application.UseCases.User.Register;
@@ -55,7 +56,7 @@ public class RegisterUserAccountUseCase : IRegisterUserAccountUseCase
 
         if (emailExist)
         {
-            result.Errors.Add(new ValidationFailure(string.Empty, "Email já Existe."));
+            result.Errors.Add(new ValidationFailure(ResourceMessagesException.EMAIL_INVALID, string.Empty));
         }
 
         if (!result.IsValid)
