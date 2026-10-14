@@ -1,9 +1,11 @@
+using Ismirk.Infrastructure.Migrations;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Options;
 using Recevita.Api.Converters;
 using Recevita.Api.Filters;
 using Recevita.Application;
 using Recevita.Infrastructure;
+using Recevita.Infrastructure.Migrations;
 using System.Globalization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -53,4 +55,13 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+MigrateDatabase();
+
 app.Run();
+
+void MigrateDatabase()
+{
+    var serviceScope = app.Services.GetRequiredService<IServiceScopeFactory>().CreateScope();
+    var connectionString = builder.Configuration.GetConnectionString("ConnectionSQLServer")!;
+    DataBaseMigration.Migrate(connectionString, serviceScope.ServiceProvider);
+}
