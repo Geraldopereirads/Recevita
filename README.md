@@ -77,3 +77,4 @@ Utilizado para facilitar a conversão de dados entre as camadas da aplicação (
 - [x] Implementar FluentMigrator
 - [x] Implementar SQL Server
 - [x] Criar Exceptions personalizadas
+- [ ] Integrar Inteligencia Artificial
