@@ -40,6 +40,14 @@ Banco de dados relacional utilizado para persistência das informações.
 
 ORM utilizado para mapeamento objeto-relacional e acesso ao banco de dados.
 
+*Dapper*
+
+Micro ORM utilizado em conjunto com o Entity Framework para consultas mais performáticas e maior controle sobre queries SQL específicas.
+
+*FluentMigrator*
+
+Utilizado para criação e versionamento do banco de dados de forma automatizada através de migrations em C#. No projeto, estou utilizando o FluentMigrator para criar tabelas, relacionamentos e manter a evolução do banco SQL Server organizada e versionada junto ao código da aplicação.
+
 *FluentValidation*
 
 Utilizei para validar os dados de entrada, mantendo as regras organizadas e desacopladas da lógica de negócio, além de permitir mensagens de erro personalizadas.
@@ -59,12 +67,13 @@ Utilizado para facilitar a conversão de dados entre as camadas da aplicação (
 - [ ] Registro de usuário 
 - [ ] Criar regra de negócio para o cadastro
 - [x] Criptografrar a senha do branco de dados
-- [ ] Armazenar no banco de dados as informações do usuário
-- [ ] criar migrations para as tabelas
+- [x] Armazenar no banco de dados as informações do usuário
+- [x] criar migrations para as tabelas
 - [ ] Implementar testes de Unidade para o validator
 - [ ] Implementar testes de Unidade para a regra de negócio
 - [ ] Implementar testes de integração para o fluxo de cadastro
 - [x] Implementar FluentValidation para validar os dados
-- [ ] Implementar Entity Farmework
-- [ ] Implementar SQL Server
+- [x] Implementar Entity Farmework
+- [x] Implementar FluentMigrator
+- [x] Implementar SQL Server
 - [x] Criar Exceptions personalizadas
