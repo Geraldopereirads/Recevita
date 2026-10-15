@@ -60,6 +60,20 @@ Utilizei para proteger as senhas dos usuários por meio de criptografia baseada 
 
 Utilizado para facilitar a conversão de dados entre as camadas da aplicação (como DTOs e entidades), deixando o código mais limpo e organizado. Com isso, evitamos repetições desnecessárias e ganhamos mais agilidade na manutenção e evolução do sistema.
 
+*xUnit*
+
+Framework utilizado para criação e execução dos testes automatizados da aplicação. Com ele é possível validar o comportamento das funcionalidades de forma isolada, aumentando a confiabilidade do sistema e facilitando futuras manutenções.
+
+*Bogus*
+
+Biblioteca utilizada para geração de dados fictícios durante os testes. Isso permite criar cenários mais próximos da realidade sem a necessidade de criar dados manualmente, tornando os testes mais legíveis e consistentes.
+
+*Shouldly*
+
+Biblioteca de asserções utilizada nos testes automatizados para tornar as validações mais expressivas e fáceis de entender. O objetivo é melhorar a legibilidade dos testes e facilitar a identificação de falhas durante o desenvolvimento.
+
+
+
 ---
 
 ### Roadmap
@@ -69,7 +83,7 @@ Utilizado para facilitar a conversão de dados entre as camadas da aplicação (
 - [x] Criptografrar a senha do branco de dados
 - [x] Armazenar no banco de dados as informações do usuário
 - [x] criar migrations para as tabelas
-- [ ] Implementar testes de Unidade para o validator
+- [x] testes de sucesso finalizados para o RegisterUserAccountValidator
 - [ ] Implementar testes de Unidade para a regra de negócio
 - [ ] Implementar testes de integração para o fluxo de cadastro
 - [x] Implementar FluentValidation para validar os dados
