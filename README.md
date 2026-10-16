@@ -83,7 +83,7 @@ Biblioteca de asserções utilizada nos testes automatizados para tornar as vali
 - [x] Criptografrar a senha do branco de dados
 - [x] Armazenar no banco de dados as informações do usuário
 - [x] criar migrations para as tabelas
-- [x] testes de sucesso finalizados para o RegisterUserAccountValidator
+- [x] Implementar testes de unidade para o validator
 - [ ] Implementar testes de Unidade para a regra de negócio
 - [ ] Implementar testes de integração para o fluxo de cadastro
 - [x] Implementar FluentValidation para validar os dados
