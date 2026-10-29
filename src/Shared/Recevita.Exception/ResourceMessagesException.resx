@@ -123,6 +123,9 @@
   <data name="EMAIL_INVALID" xml:space="preserve">
     <value>O email deve ser válido.</value>
   </data>
+  <data name="NAME_INVALID" xml:space="preserve">
+    <value>O nome deve ser válido.</value>
+  </data>
   <data name="NAME_EMPTY" xml:space="preserve">
     <value>O nome não pode ser vazio.</value>
   </data>

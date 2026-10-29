@@ -52,11 +52,20 @@ public class RegisterUserAccountUseCase : IRegisterUserAccountUseCase
 
         var result = validator.Validate(request);
 
+        var nameExist = await _userReadOnlyRepository.ExistActiveUserWithName(request.Name);
+
         var emailExist = await _userReadOnlyRepository.ExistActiveUserWithEmail(request.Email);
 
         if (emailExist)
         {
-            result.Errors.Add(new ValidationFailure(ResourceMessagesException.EMAIL_INVALID, string.Empty));
+            result.Errors.Add(new ValidationFailure(string.Empty, ResourceMessagesException.EMAIL_INVALID));
+
+        }
+
+        if (nameExist)
+        {
+            result.Errors.Add(new ValidationFailure(string.Empty, ResourceMessagesException.NAME_INVALID));
+
         }
 
         if (!result.IsValid)
