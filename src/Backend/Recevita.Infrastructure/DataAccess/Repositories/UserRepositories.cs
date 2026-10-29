@@ -15,4 +15,6 @@ internal sealed class UserRepositories : IUserWriteOnlyRepository, IUserReadOnly
     public async Task Add(User user) => await _dbContext.Users.AddAsync(user);
 
     public async Task<bool> ExistActiveUserWithEmail(string email) => await _dbContext.Users.AnyAsync(user => user.Active && user.Email.Equals(email));
+
+    public async Task<bool> ExistActiveUserWithName(string name) => await _dbContext.Users.AnyAsync(user => user.Active && user.Name.Equals(name));
 }

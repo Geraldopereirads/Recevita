@@ -88,6 +88,15 @@ namespace Recevita.Exception {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to O nome deve ser válido..
+        /// </summary>
+        public static string NAME_INVALID {
+            get {
+                return ResourceManager.GetString("NAME_INVALID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to A senha não pode ser vazia..
         /// </summary>
         public static string PASSWORD_EMPTY {
