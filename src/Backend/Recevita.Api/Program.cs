@@ -65,3 +65,5 @@ void MigrateDatabase()
     var connectionString = builder.Configuration.GetConnectionString("ConnectionSQLServer")!;
     DataBaseMigration.Migrate(connectionString, serviceScope.ServiceProvider);
 }
+
+public partial class Program { }
