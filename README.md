@@ -78,14 +78,14 @@ Biblioteca de asserções utilizada nos testes automatizados para tornar as vali
 
 ### Roadmap
 
-- [ ] Registro de usuário 
-- [ ] Criar regra de negócio para o cadastro
+- [x] Registro de usuário 
+- [x] Criar regra de negócio para o cadastro
 - [x] Criptografrar a senha do branco de dados
 - [x] Armazenar no banco de dados as informações do usuário
 - [x] criar migrations para as tabelas
 - [x] Implementar testes de unidade para o validator
-- [ ] Implementar testes de Unidade para a regra de negócio
-- [ ] Implementar testes de integração para o fluxo de cadastro
+- [x] Implementar testes de Unidade para a regra de negócio
+- [x] Implementar testes de integração para o fluxo de cadastro
 - [x] Implementar FluentValidation para validar os dados
 - [x] Implementar Entity Farmework
 - [x] Implementar FluentMigrator
